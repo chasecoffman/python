@@ -61,24 +61,19 @@ def third_course():
 third_course()
 
 
-#need to figure out how to use greater than less than with float
-#possibly using a module
 def final_output():
     sum_of = sum(arr)
-    final_gpa = sum_of / 3
+    final = sum_of / 3
+    final_gpa = round(final, 3)
     print(final_gpa)
 
-    ignation = print("Eligible for" + color.YELLOW + " Ignatian Honors " + color.END + "(4.0 and Above)")
-    first = print("Eligible for" + color.BLUE + " First Honors " + color.END + "(3.600 to 3.999)")
-    second = print("Eligible for" + color.BLUE + " Second Honors " + color.END + "(3.000 to 3.599)")
-
-    if final_gpa >= 4.000:
-        ignation
-    elif final_gpa > 3.600 and final_gpa < 3.999:
-        first
-    elif final_gpa > 3.000 and final_gpa < 3.599:
-        second
+    if float(final_gpa) >= 4.000:
+        print("Eligible for" + color.YELLOW + " Ignatian Honors " + color.END + "(4.0 and Above)")
+    elif float(final_gpa) > 3.600 and float(final_gpa) < 3.999:
+        print("Eligible for" + color.BLUE + " First Honors " + color.END + "(3.600 to 3.999)")
+    elif float(final_gpa) > 3.000 and float(final_gpa) < 3.599:
+        print("Eligible for" + color.BLUE + " Second Honors " + color.END + "(3.000 to 3.599)")
     else:
-        print("")
+        print("Not Eligible for any Honors at this time.")
 final_output()
 
