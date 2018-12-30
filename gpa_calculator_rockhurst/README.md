@@ -1,4 +1,5 @@
-# python
+# GPA Calculator for Rockhurst High School
+
 This is a project I started using beginner methods in Python that will calculate a High School students GPA.
 
 Beyond that it can also let Rockhurst students know what honors they are eligible for at the end of semester:
