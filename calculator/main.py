@@ -6,7 +6,7 @@ arr = []
 
 def first_course():
     print(color.UNDERLINE + color.PURPLE + "Course 1" + color.END)
-    course1 = course(input("AP/Honors? " + color.YELLOW + color.BOLD + "YES (1) NO (2)" + color.END), input("Enter Grade: "))
+    course1 = course(input("AP/Honors? " + color.YELLOW + color.BOLD + "YES (1) NO (2)" + color.END), input("Enter Grade: ").upper())
     ap_honors_course = (regular_course[course1.grade]) + 1.0
 
     if course1.is_regular == "1" and course1.grade in regular_course:
@@ -25,7 +25,7 @@ first_course()
 
 def second_course():
     print(color.UNDERLINE + color.PURPLE + "Course 2" + color.END)
-    course2 = course(input("AP/Honors? " + color.YELLOW + color.BOLD + "YES (1) NO (2)" + color.END), input("Enter Grade: "))
+    course2 = course(input("AP/Honors? " + color.YELLOW + color.BOLD + "YES (1) NO (2)" + color.END), input("Enter Grade: ").upper())
     ap_honors_course = (regular_course[course2.grade]) + 1.0
 
     if course2.is_regular == "1" and course2.grade in regular_course:
@@ -44,7 +44,7 @@ second_course()
 
 def third_course():
     print(color.UNDERLINE + color.PURPLE + "Course 3" + color.END)
-    course3 = course(input("AP/Honors? " + color.YELLOW + color.BOLD + "YES (1) NO (2)" + color.END), input("Enter Grade: "))
+    course3 = course(input("AP/Honors? " + color.YELLOW + color.BOLD + "YES (1) NO (2)" + color.END), input("Enter Grade: ").upper())
     ap_honors_course = (regular_course[course3.grade]) + 1.0
 
     if course3.is_regular == "1" and course3.grade in regular_course:
@@ -63,7 +63,7 @@ third_course()
 
 def fourth_course():
     print(color.UNDERLINE + color.PURPLE + "Course 4" + color.END)
-    course4 = course(input("AP/Honors? " + color.YELLOW + color.BOLD + "YES (1) NO (2)" + color.END), input("Enter Grade: "))
+    course4 = course(input("AP/Honors? " + color.YELLOW + color.BOLD + "YES (1) NO (2)" + color.END), input("Enter Grade: ").upper())
     ap_honors_course = (regular_course[course4.grade]) + 1.0
 
     if course4.is_regular == "1" and course4.grade in regular_course:
@@ -82,7 +82,7 @@ fourth_course()
 
 def fifth_course():
     print(color.UNDERLINE + color.PURPLE + "Course 5" + color.END)
-    course5 = course(input("AP/Honors? " + color.YELLOW + color.BOLD + "YES (1) NO (2)" + color.END), input("Enter Grade: "))
+    course5 = course(input("AP/Honors? " + color.YELLOW + color.BOLD + "YES (1) NO (2)" + color.END), input("Enter Grade: ").upper())
     ap_honors_course = (regular_course[course5.grade]) + 1.0
 
     if course5.is_regular == "1" and course5.grade in regular_course:
@@ -101,7 +101,7 @@ fifth_course()
 
 def sixth_course():
     print(color.UNDERLINE + color.PURPLE + "Course 6" + color.END)
-    course6 = course(input("AP/Honors? " + color.YELLOW + color.BOLD + "YES (1) NO (2)" + color.END), input("Enter Grade: "))
+    course6 = course(input("AP/Honors? " + color.YELLOW + color.BOLD + "YES (1) NO (2)" + color.END), input("Enter Grade: ").upper())
     ap_honors_course = (regular_course[course6.grade]) + 1.0
 
     if course6.is_regular == "1" and course6.grade in regular_course:
@@ -120,7 +120,7 @@ sixth_course()
 
 def seventh_course():
     print(color.UNDERLINE + color.PURPLE + "Course 7" + color.END)
-    course7 = course(input("AP/Honors? " + color.YELLOW + color.BOLD + "YES (1) NO (2)" + color.END), input("Enter Grade: "))
+    course7 = course(input("AP/Honors? " + color.YELLOW + color.BOLD + "YES (1) NO (2)" + color.END), input("Enter Grade: ").upper())
     ap_honors_course = (regular_course[course7.grade]) + 1.0
 
     if course7.is_regular == "1" and course7.grade in regular_course:
