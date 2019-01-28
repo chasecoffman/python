@@ -1,11 +1,11 @@
 from setup import regular_course, course, color
 arr = []
 
-#repeating the gpa conversion for every course
-#until I can figure out how to loop it and append it to the array properly
 
-def first_course():
-    print(color.UNDERLINE + color.PURPLE + "Course 1" + color.END)
+i = 1
+while i <= 7:
+    def courses():
+        print(color.UNDERLINE + color.PURPLE + "Course" + color.END,i)
     course1 = course(input("AP/Honors? " + color.YELLOW + color.BOLD + "YES (1) NO (2)" + color.END), input("Enter Grade: ").upper())
     ap_honors_course = (regular_course[course1.grade]) + 1.0
 
@@ -19,123 +19,10 @@ def first_course():
         arr.append(regular_course[course1.grade])
     else:
         print("Invalid Grade")
-        first_course()
+        courses()
 
-first_course()
-
-def second_course():
-    print(color.UNDERLINE + color.PURPLE + "Course 2" + color.END)
-    course2 = course(input("AP/Honors? " + color.YELLOW + color.BOLD + "YES (1) NO (2)" + color.END), input("Enter Grade: ").upper())
-    ap_honors_course = (regular_course[course2.grade]) + 1.0
-
-    if course2.is_regular == "1" and course2.grade in regular_course:
-        if ap_honors_course <= 3.3:
-            arr.append(regular_course[course2.grade])
-        else:
-            arr.append(ap_honors_course)
-
-    elif course2.is_regular == "2" and course2.grade in regular_course:
-        arr.append(regular_course[course2.grade])
-    else:
-        print("Invalid Grade")
-        second_course()
-
-second_course()
-
-def third_course():
-    print(color.UNDERLINE + color.PURPLE + "Course 3" + color.END)
-    course3 = course(input("AP/Honors? " + color.YELLOW + color.BOLD + "YES (1) NO (2)" + color.END), input("Enter Grade: ").upper())
-    ap_honors_course = (regular_course[course3.grade]) + 1.0
-
-    if course3.is_regular == "1" and course3.grade in regular_course:
-        if ap_honors_course <= 3.3:
-            arr.append(regular_course[course3.grade])
-        else:
-            arr.append(ap_honors_course)
-
-    elif course3.is_regular == "2" and course3.grade in regular_course:
-        arr.append(regular_course[course3.grade])
-    else:
-        print("Invalid Grade")
-        third_course()
-
-third_course()
-
-def fourth_course():
-    print(color.UNDERLINE + color.PURPLE + "Course 4" + color.END)
-    course4 = course(input("AP/Honors? " + color.YELLOW + color.BOLD + "YES (1) NO (2)" + color.END), input("Enter Grade: ").upper())
-    ap_honors_course = (regular_course[course4.grade]) + 1.0
-
-    if course4.is_regular == "1" and course4.grade in regular_course:
-        if ap_honors_course <= 3.3:
-            arr.append(regular_course[course4.grade])
-        else:
-            arr.append(ap_honors_course)
-
-    elif course4.is_regular == "2" and course4.grade in regular_course:
-        arr.append(regular_course[course4.grade])
-    else:
-        print("Invalid Grade")
-        fourth_course()
-
-fourth_course()
-
-def fifth_course():
-    print(color.UNDERLINE + color.PURPLE + "Course 5" + color.END)
-    course5 = course(input("AP/Honors? " + color.YELLOW + color.BOLD + "YES (1) NO (2)" + color.END), input("Enter Grade: ").upper())
-    ap_honors_course = (regular_course[course5.grade]) + 1.0
-
-    if course5.is_regular == "1" and course5.grade in regular_course:
-        if ap_honors_course <= 3.3:
-            arr.append(regular_course[course5.grade])
-        else:
-            arr.append(ap_honors_course)
-
-    elif course5.is_regular == "2" and course5.grade in regular_course:
-        arr.append(regular_course[course5.grade])
-    else:
-        print("Invalid Grade")
-        fifth_course()
-
-fifth_course()
-
-def sixth_course():
-    print(color.UNDERLINE + color.PURPLE + "Course 6" + color.END)
-    course6 = course(input("AP/Honors? " + color.YELLOW + color.BOLD + "YES (1) NO (2)" + color.END), input("Enter Grade: ").upper())
-    ap_honors_course = (regular_course[course6.grade]) + 1.0
-
-    if course6.is_regular == "1" and course6.grade in regular_course:
-        if ap_honors_course <= 3.3:
-            arr.append(regular_course[course6.grade])
-        else:
-            arr.append(ap_honors_course)
-
-    elif course6.is_regular == "2" and course6.grade in regular_course:
-        arr.append(regular_course[course6.grade])
-    else:
-        print("Invalid Grade")
-        sixth_course()
-
-sixth_course()
-
-def seventh_course():
-    print(color.UNDERLINE + color.PURPLE + "Course 7" + color.END)
-    course7 = course(input("AP/Honors? " + color.YELLOW + color.BOLD + "YES (1) NO (2)" + color.END), input("Enter Grade: ").upper())
-    ap_honors_course = (regular_course[course7.grade]) + 1.0
-
-    if course7.is_regular == "1" and course7.grade in regular_course:
-        if ap_honors_course <= 3.3:
-            arr.append(regular_course[course7.grade])
-        else:
-            arr.append(ap_honors_course)
-
-    elif course7.is_regular == "2" and course7.grade in regular_course:
-        arr.append(regular_course[course7.grade])
-    else:
-        print("Invalid Grade")
-        seventh_course()
-
-seventh_course()
+    i += 1
+    courses()
 
 
 def final_output():
