@@ -6,15 +6,17 @@ from SpriteManager import sprites
 from raindrop import raindrop
 from JiggleBot import JiggleBot
 from ScreenSaverBot import ScreenSaverBot
+import SpriteManager
 
 def setup():
     print "Built with Processing Python version " + platform.python_version()
-    
-    global player, sprites
     size(500, 500)
-    playerTeam = 1
+    player = Player(width / 2, height - 100, 1);
+    SpriteManager.setPlayer(player)
+    SpriteManager.spawn(JiggleBot (200, 50, 20))
+    SpriteManager.spawn(Enemy(100, 100, 2))
+    
     enemyTeam = 2
-    player = Player(width/2, height/2, playerTeam)
     
     sprites.append(player)
     sprites.append(Enemy(50, 50, enemyTeam))
@@ -54,9 +56,7 @@ def checkCollisions():
                     sprites.remove(b)
     
 def keyPressed():
-    global player
-    player.keyDown()    
+    SpriteManager.player.keyDown()    
         
 def keyReleased():
-    global player
-    player.keyUp()
+    SpriteManager.player.keyUp()
