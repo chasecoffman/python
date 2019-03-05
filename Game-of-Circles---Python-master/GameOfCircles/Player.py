@@ -1,7 +1,9 @@
-from SpriteManager import sprites
+import SpriteManager
+
+from Sprite import Sprite
 from Bullet import Bullet
 
-class Player:
+class Player(Sprite):
     
     # instance variables
     left = False
@@ -22,6 +24,9 @@ class Player:
     def display(self):
         fill(self.c)
         ellipse(self.x, self.y, self.diameter, self.diameter)
+        
+    def handleCollision(self):
+        pass
         
     def move(self):
         if self.left:
