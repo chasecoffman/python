@@ -6,9 +6,9 @@ import SpriteManager
 
 class Enemy(Sprite):
     
-    speed = 8
-    diameter = 50
-    c = color(0, 0, 255)
+    speed = 5
+    diameter = 40
+    c = color(255, 255, 255)
     mark = 0
     wait = 1000
     go = True
