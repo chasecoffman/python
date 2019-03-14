@@ -2,8 +2,9 @@ import SpriteManager
 
 from Sprite import Sprite
 from PlayerBullet import PlayerBullet
+from Armored import Armored
 
-class Player(Sprite):
+class Player(Armored, Sprite):
     
     # instance variables
     left = False
@@ -18,13 +19,7 @@ class Player(Sprite):
     def __init__(self, x, y, team):
         self.x = x
         self.y = y
-        self.team = team
-        
-    # instance methods
-    def display(self):
-        fill(self.c)
-        ellipse(self.x, self.y, self.diameter, self.diameter)
-        
+        self.team = team      
 
         
     def move(self):

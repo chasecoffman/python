@@ -6,6 +6,7 @@ from SpriteManager import sprites
 from raindrop import raindrop
 from JiggleBot import JiggleBot
 from ScreenSaverBot import ScreenSaverBot
+from Armored import Armored
 import SpriteManager
 
 def setup():
@@ -22,7 +23,7 @@ def setup():
     SpriteManager.spawn(player)
     SpriteManager.spawn(Enemy(0, 0, enemyTeam))
     SpriteManager.spawn(Enemy(500, 150, enemyTeam))
-                           
+                        
 def draw():
     background(0)
     SpriteManager.animate()
